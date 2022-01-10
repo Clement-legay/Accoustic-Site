@@ -7,6 +7,7 @@ import NotFound from "../views/NotFound";
 import Tab from "../views/Tab";
 import tabs_maker from "../components/tabs_maker";
 import Diagrams from "../views/Diagrams"
+import Gammes from "../views/Gammes";
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/',
     name: 'Accueil',
     component: accueil
+  },
+  {
+    path: '/gammes',
+    name: 'Gammes',
+    component: Gammes
   },
   {
     path: '/quiz',

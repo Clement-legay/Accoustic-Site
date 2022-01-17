@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import HeaderComponentShort from "../components/HeaderComponentShort";
+import HeaderComponentShort from "../components/Ukulele/HeaderComponentShort";
 
 export default {
   name : '404',

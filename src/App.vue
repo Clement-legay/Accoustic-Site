@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import backToTop from "./components/backToTop";
+import backToTop from "./components/Ukulele/backToTop";
 
 export default {
   name: 'App',
@@ -18,3 +18,7 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+@import "assets/css/scrollbar.css";
+</style>

@@ -32,32 +32,32 @@
         <p class="pa-4" v-for="(note, index) in finalGamme" :key="index">{{note}}</p>
       </v-row>
       <v-row>
-        <v-col cols="12" style="background-image:url('/Img/Guitare/tableau-guitar.jpeg') !important;background-position: center; height: 30vh; background-size: cover;">
+        <v-col cols="12" :style="$vuetify.breakpoint.xlOnly ? 'height:30vh' : 'height: 40vh'" style="background-image:url('/Img/Guitare/tableau-guitar.jpeg') !important;background-position: center; background-size: cover;">
           <v-row class="ml-xl-16 pl-12 pl-xl-12">
-            <v-col class="ml-16" cols="9" xl="7">
+            <v-col class="ml-16" cols="7" xl="7">
               <v-row v-for="(corde, index) in cordes" :key="index" class="mt-3 pr-4">
-                <v-col class="ml-xl-3 pr-7 pr-xl-16 pb-xl-5 pb-4" v-for="(frette, index) in corde.notes.slice(0,5)" :key="index">
+                <v-col class="ml-xl-3 pr-7 pr-xl-16 pb-xl-5 pb-4 mr-7" v-for="(frette, index) in corde.notes.slice(0,5)" :key="index">
                   <v-row>
                     <v-avatar :size="$vuetify.breakpoint.xl   ? 35 : 20" v-if="test4(frette)" color="blue">
                       {{ frette.note }}
                     </v-avatar>
                   </v-row>
                 </v-col>
-                <v-col class="pr-xl-12 pb-xl-5 pb-4" v-for="(frette, index) in corde.notes.slice(5,7)" :key="index">
+                <v-col class="pr-xl-12 pb-xl-5 pb-0 pl-8" v-for="(frette, index) in corde.notes.slice(5,7)" :key="index">
                   <v-row>
                     <v-avatar :size="$vuetify.breakpoint.xl ? 35 : 20" v-if="test4(frette)" color="blue">
                       {{ frette.note }}
                     </v-avatar>
                   </v-row>
                 </v-col>
-                <v-col class="pb-xl-5 pb-4" v-for="(frette, index) in corde.notes.slice(7,8)" :key="index">
+                <v-col class="pb-xl-5 pb-0" v-for="(frette, index) in corde.notes.slice(7,8)" :key="index">
                   <v-row>
                     <v-avatar :size="$vuetify.breakpoint.xl ? 35 : 20" v-if="test4(frette)" color="blue">
                       {{ frette.note }}
                     </v-avatar>
                   </v-row>
                 </v-col>
-                <v-col class=" pb-xl-5 pb-4" style="position: relative; margin-left: 30px" v-for="(frette, index) in corde.notes.slice(8,9)" :key="index">
+                <v-col class=" pb-xl-5 pb-0" style="position: relative; margin-left: 30px" v-for="(frette, index) in corde.notes.slice(8,9)" :key="index">
                   <v-row>
                     <v-avatar :size="$vuetify.breakpoint.xl ? 35 : 20" v-if="test4(frette)" color="blue">
                       {{ frette.note }}

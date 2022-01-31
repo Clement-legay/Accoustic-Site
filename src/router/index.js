@@ -14,6 +14,9 @@ import guitare from "../views/Guitare/guitare";
 import AccueilGuit from "../views/Guitare/AccueilGuit";
 import DiagramsGuit from "../views/Guitare/DiagramsGuit";
 import accordMakerGuit from "../components/Guitare/accordMakerGuit";
+import musicsList from "../views/Guitare/musicsList";
+import updateMusic from "../views/Guitare/updateMusic";
+import chooseMusic from "../views/Guitare/chooseMusic";
 
 Vue.use(VueRouter)
 
@@ -91,6 +94,21 @@ const routes = [
         name: 'accordsGuit',
         props: true,
         component: DiagramsGuit
+      },
+      {
+        path: "musics",
+        name: "musics",
+        component: musicsList
+      },
+      {
+        path: 'music-maker',
+        name: 'update',
+        component: updateMusic
+      },
+      {
+        path: 'music-player',
+        name: 'player',
+        component: chooseMusic
       }
     ]
   },
